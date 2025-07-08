@@ -1,2 +1,2 @@
-# character-creator
-Fantasy themed character creator
+# Character Creator
+Fantasy themed character creator, built with React
