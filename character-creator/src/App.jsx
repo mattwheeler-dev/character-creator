@@ -4,10 +4,11 @@ import CustomizationPanel from "./CustomizationPanel";
 
 const App = () => {
 	const [appearance, setAppearance] = useState({
+		gender: "male",
 		skin: "light",
 		hairStyle: "short",
 		hairColor: "brown",
-		facialHair: "none",
+		facialHair: "beard",
 		facialHairColor: "brown",
 		torso: "starter_shirt",
 		legs: "starter_pants",

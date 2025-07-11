@@ -21,11 +21,14 @@ const CustomizationPanel = ({ appearance, setAppearance }) => {
 				<option value="brown">Brown</option>
 				<option value="blue">Blue</option>
 				<option value="black">Black</option>
+				<option value="green">Green</option>
+				<option value="purple">Purple</option>
 			</select>
 
 			<select onChange={(e) => handleChange("facialHair", e.target.value)}>
 				<option value="none">None</option>
-				<option value="stubble">Stubble</option>
+				<option value="mustache">Mustache</option>
+				<option value="goatee">Goatee</option>
 				<option value="beard">Beard</option>
 			</select>
 
@@ -33,6 +36,8 @@ const CustomizationPanel = ({ appearance, setAppearance }) => {
 				<option value="brown">Brown</option>
 				<option value="blue">Blue</option>
 				<option value="black">Black</option>
+				<option value="green">Green</option>
+				<option value="purple">Purple</option>
 			</select>
 		</div>
 	);
