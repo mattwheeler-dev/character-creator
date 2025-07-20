@@ -40,7 +40,7 @@ const CharacterDisplay = () => {
 			/>
 
 			<div className="menu">
-				<h2>Customization Options</h2>
+				<h2>Customization Menu</h2>
 				{/* Body type selection */}
 				<div className="types-btns">
 					<h3>Body Type</h3>
