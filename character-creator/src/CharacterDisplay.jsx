@@ -23,21 +23,43 @@ const skinTonesMap = {
 	],
 };
 
+const hairColors = ["brown", "black", "blue", "purple", "green"];
+
 const CharacterDisplay = () => {
 	const [selectedType, setSelectedType] = useState("type1");
 	const [selectedTone, setSelectedTone] = useState("skin1");
+	const [selectedHairStyle, setSelectedHairStyle] = useState("short");
+	const [selectedHairColor, setSelectedHairColor] = useState("blue");
+	const [selectedFacialHairStyle, setSelectedFacialHairStyle] =
+		useState("medium");
+	const [selectedFacialHairColor, setSelectedFacialHairColor] =
+		useState("blue");
 
 	const skinTones = skinTonesMap[selectedType];
 
-	const imagePath = `/assets/characters/${selectedType}/base/${selectedTone}.webp`;
+	const skinPath = `/assets/characters/${selectedType}/base/${selectedTone}.webp`;
+	const hairPath = `/assets/characters/${selectedType}/hair/${selectedHairStyle}_${selectedHairColor}.webp`;
+	const facialHairPath = `/assets/characters/${selectedType}/facial_hair/${selectedFacialHairStyle}_${selectedFacialHairColor}.webp`;
 
 	return (
 		<section className="character-display">
-			<img
-				className="character"
-				src={imagePath}
-				alt={`Game art character with body type ${selectedType} and skin tone ${selectedTone}`}
-			/>
+			<div className="character">
+				<img
+					className="base"
+					src={skinPath}
+					alt={`Game art character with body type ${selectedType} and skin tone ${selectedTone}`}
+				/>
+				<img
+					className="hair"
+					src={hairPath}
+					alt={`${selectedHairStyle}, ${selectedHairColor} hair`}
+				/>
+				<img
+					className="facial-hair"
+					src={facialHairPath}
+					alt={`${selectedFacialHairStyle}, ${selectedFacialHairColor} facial hair`}
+				/>
+			</div>
 
 			<div className="menu">
 				<h2>Customization Menu</h2>
