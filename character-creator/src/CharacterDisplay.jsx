@@ -23,6 +23,10 @@ const skinTonesMap = {
 	],
 };
 
+const hairStyles = ["none", "short"];
+
+const facialHairStyles = ["none", "medium"];
+
 const hairColors = ["brown", "black", "blue", "purple", "green"];
 
 const CharacterDisplay = () => {
@@ -36,6 +40,10 @@ const CharacterDisplay = () => {
 		useState("blue");
 
 	const skinTones = skinTonesMap[selectedType];
+	const hairStyle = hairStyles[selectedHairStyle];
+	const hairColor = hairColors[selectedHairColor];
+	const facialHair = facialHairStyles[selectedFacialHairStyle];
+	const facialHairColor = hairColors[selectedFacialHairColor];
 
 	const skinPath = `/assets/characters/${selectedType}/base/${selectedTone}.webp`;
 	const hairPath = `/assets/characters/${selectedType}/hair/${selectedHairStyle}_${selectedHairColor}.webp`;
@@ -72,7 +80,7 @@ const CharacterDisplay = () => {
 							key={type}
 							onClick={() => setSelectedType(type)}
 						>
-							{type === "type1" ? "Type 1" : "Type 2"}
+							{type}
 						</button>
 					))}
 				</div>
@@ -95,21 +103,57 @@ const CharacterDisplay = () => {
 				{/* Hair style selection */}
 				<div className="hair-style-btns">
 					<h3>Hair Style</h3>
+					{hairStyles.map((style) => (
+						<button
+							className={selectedHairStyle == style ? "selected" : ""}
+							key={style}
+							onClick={() => setSelectedHairStyle(style)}
+						>
+							{style}
+						</button>
+					))}
 				</div>
 
 				{/* Hair color selection */}
 				<div className="hair-color-btns">
 					<h3>Hair Color</h3>
+					{hairColors.map((color) => (
+						<button
+							className={selectedHairColor == color ? "selected" : ""}
+							key={color}
+							onClick={() => setSelectedHairColor(color)}
+						>
+							{color}
+						</button>
+					))}
 				</div>
 
 				{/* Facial hair style selection */}
 				<div className="facial-hair-style-btns">
 					<h3>Facial Hair</h3>
+					{facialHairStyles.map((style) => (
+						<button
+							className={selectedFacialHairStyle == style ? "selected" : ""}
+							key={style}
+							onClick={() => setSelectedFacialHairStyle(style)}
+						>
+							{style}
+						</button>
+					))}
 				</div>
 
 				{/* Facial hair color selection */}
 				<div className="facial-hair-color-btns">
 					<h3>Facial Hair Color</h3>
+					{hairColors.map((color) => (
+						<button
+							className={selectedFacialHairColor == color ? "selected" : ""}
+							key={color}
+							onClick={() => setSelectedFacialHairColor(color)}
+						>
+							{color}
+						</button>
+					))}
 				</div>
 			</div>
 		</section>

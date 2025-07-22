@@ -41,6 +41,10 @@ h3 {
 	border: 2px solid #d7d7d7;
 }
 
+button {
+	text-transform: capitalize;
+}
+
 .types-btns,
 .tones-btns {
 	margin: 1rem 0;
