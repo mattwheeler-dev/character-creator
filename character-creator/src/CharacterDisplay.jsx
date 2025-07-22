@@ -40,18 +40,14 @@ const CharacterDisplay = () => {
 		useState("blue");
 
 	const skinTones = skinTonesMap[selectedType];
-	const hairStyle = hairStyles[selectedHairStyle];
-	const hairColor = hairColors[selectedHairColor];
-	const facialHair = facialHairStyles[selectedFacialHairStyle];
-	const facialHairColor = hairColors[selectedFacialHairColor];
 
 	const skinPath = `/assets/characters/${selectedType}/base/${selectedTone}.webp`;
 	const hairPath = `/assets/characters/${selectedType}/hair/${selectedHairStyle}_${selectedHairColor}.webp`;
 	const facialHairPath = `/assets/characters/${selectedType}/facial_hair/${selectedFacialHairStyle}_${selectedFacialHairColor}.webp`;
 
 	return (
-		<section className="character-display">
-			<div className="character">
+		<section className="container">
+			<div className="character-display">
 				<img
 					className="base"
 					src={skinPath}
