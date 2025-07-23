@@ -7,6 +7,7 @@
 body {
 	height: 100dvh;
 	width: 100dvw;
+	padding: 1rem 0;
 	color: #fff;
 	background-color: #606060;
 	overflow-x: clip;
@@ -59,40 +60,41 @@ button {
 	text-transform: capitalize;
 }
 
-.types-btns,
-.tones-btns {
+.btns-container {
 	margin: 1rem 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
 
-.types-btns button,
-.tones-btns button {
+.btns-container button {
 	cursor: pointer;
 	margin-top: 0.5rem;
 	border: 3px solid #ffffff6c;
 	transition: all 0.2s linear;
 }
 
-.types-btns button {
+.types button,
+.hair-styles button,
+.facial-hair-styles button {
 	padding: 0.25rem 0.5rem;
 	font-size: 1rem;
 	color: #fff;
 	background-color: #23527f;
 }
 
-.tones-btns button {
+.tones button,
+.hair-colors button,
+.facial-hair-colors button {
 	height: 2rem;
 	width: 10%;
-}
-
-.types-btns button:active,
-.tones-btns button:active {
-	scale: 0.8;
 }
 
 button.selected {
 	border: 3px groove #ff6a00;
 	box-shadow: 0 0 0.5rem #ff6a00;
+}
+
+button:active {
+	scale: 0.8;
 }
