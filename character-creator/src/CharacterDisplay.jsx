@@ -49,6 +49,7 @@ const CharacterDisplay = () => {
 	const skinTones = skinTonesMap[selectedType];
 
 	const skinPath = `/assets/characters/${selectedType}/base/${selectedTone.value}.webp`;
+	const clothesPath = `assets/characters/${selectedType}/clothes.webp`;
 	const hairPath = `/assets/characters/${selectedType}/hair/${selectedHairStyle}_${selectedHairColor.id}.webp`;
 	const facialHairPath = `/assets/characters/${selectedType}/facial_hair/${selectedFacialHairStyle}_${selectedFacialHairColor.id}.webp`;
 
@@ -61,15 +62,24 @@ const CharacterDisplay = () => {
 					alt={`Game art character with body type ${selectedType} and skin tone ${selectedTone.id}`}
 				/>
 				<img
-					className="hair"
-					src={hairPath}
-					alt={`${selectedHairStyle}, ${selectedHairColor} hair`}
+					className="clothes"
+					src={clothesPath}
+					alt={`Game art fantasy theme basic outfit`}
 				/>
-				<img
-					className="facial-hair"
-					src={facialHairPath}
-					alt={`${selectedFacialHairStyle}, ${selectedFacialHairColor} facial hair`}
-				/>
+				{selectedHairStyle != "none" && (
+					<img
+						className="hair"
+						src={hairPath}
+						alt={`${selectedHairStyle}, ${selectedHairColor} hair`}
+					/>
+				)}
+				{selectedFacialHairStyle != "none" && (
+					<img
+						className="facial-hair"
+						src={facialHairPath}
+						alt={`${selectedFacialHairStyle}, ${selectedFacialHairColor} facial hair`}
+					/>
+				)}
 			</div>
 
 			<div className="menu">
