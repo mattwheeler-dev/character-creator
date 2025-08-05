@@ -7,9 +7,8 @@
 body {
 	height: 100dvh;
 	width: 100dvw;
-	padding: 1rem 0;
 	color: #fff;
-	background-color: #606060;
+	background-color: #505050;
 	overflow-x: clip;
 }
 
@@ -36,7 +35,6 @@ h3 {
 .character-display {
 	width: 100%;
 	max-width: 800px;
-	margin: 0 auto;
 	aspect-ratio: 1 / 1;
 	position: relative;
 }
@@ -50,28 +48,27 @@ h3 {
 }
 
 .menu {
+	max-height: 350px;
 	width: 94%;
 	padding: 0.5rem 0;
 	background-color: #202020;
-	border: 2px solid #d7d7d7;
+	border: 3px solid #d7d7d7;
+	overflow-y: scroll;
 }
 
 button {
+	cursor: pointer;
+	margin-top: 0.2rem;
 	text-transform: capitalize;
+	border: 3px solid #ffffff6c;
+	transition: all 0.2s linear;
 }
 
 .btns-container {
-	margin: 1rem 0;
+	margin: 0.5rem 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-}
-
-.btns-container button {
-	cursor: pointer;
-	margin-top: 0.5rem;
-	border: 3px solid #ffffff6c;
-	transition: all 0.2s linear;
 }
 
 .types button,
@@ -91,8 +88,8 @@ button {
 }
 
 button.selected {
-	border: 3px groove #ff6a00;
-	box-shadow: 0 0 0.5rem #ff6a00;
+	border: 3px groove #00ff9d;
+	box-shadow: 0 0 0.5rem #00ff9d;
 }
 
 button:active {

@@ -38,10 +38,10 @@ const facialHairStyles = ["none", "medium"];
 const CharacterDisplay = () => {
 	const [selectedType, setSelectedType] = useState("type1");
 	const [selectedTone, setSelectedTone] = useState(skinTonesMap["type1"][0]);
-	const [selectedHairStyle, setSelectedHairStyle] = useState("short");
+	const [selectedHairStyle, setSelectedHairStyle] = useState("none");
 	const [selectedHairColor, setSelectedHairColor] = useState(hairColors[0]);
 	const [selectedFacialHairStyle, setSelectedFacialHairStyle] =
-		useState("medium");
+		useState("none");
 	const [selectedFacialHairColor, setSelectedFacialHairColor] = useState(
 		hairColors[0]
 	);
