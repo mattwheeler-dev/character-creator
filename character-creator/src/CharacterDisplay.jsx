@@ -31,7 +31,7 @@ const hairColors = [
 	{ id: "green", name: "Green", color: "#263D0C" },
 ];
 
-const hairStyles = ["none", "short", "afro"];
+const hairStyles = ["none", "short", "afro", "long"];
 
 const facialHairStyles = ["none", "medium"];
 
