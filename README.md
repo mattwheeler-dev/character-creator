@@ -4,5 +4,7 @@
 
 <p>Stand-alone version of a fantasy themed character generator I built for a small game I'm working on</p>
 
+<p>Currently includes 2 body types (simply named Type1 and Type2 for inclusivity), each with 4 hair style options, 2 facial hair style options, and 5 color options for both types of hair.</p>
+
 <p>Check it out live <a href="https://character-creator-125d5.web.app">here.</a></p>
 
